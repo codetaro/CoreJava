@@ -1,6 +1,6 @@
 package com.journaldev.access;
 
-class TestA {
+public class TestA {
 
     public static void methodPublic() {
         methodPrivate();
@@ -14,5 +14,6 @@ class TestA {
         methodPrivate();
     }
 
-    private static void methodPrivate() {}
+    private static void methodPrivate() {
+    }
 }

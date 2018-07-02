@@ -1,10 +1,11 @@
-package com.journaldev;
+package com.journaldev.java;
 
-        import java.util.Arrays;
+import java.util.Arrays;
 
-public class LabelForLoop {
+public class JavaContinueLabel {
 
     public static void main(String[] args) {
+
         int[][] intArr = {{1, -2, 3}, {0, 3}, {1, 2, 5}, {9, 2, 5}};
 
         process:
@@ -17,9 +18,11 @@ public class LabelForLoop {
                 }
             }
             if (allPositive) {
-                System.out.println("Processing " + Arrays.toString(intArr[i]));
+                // process the array
+                System.out.println("Processing the array of all positive ints. " + Arrays.toString(intArr[i]));
             }
             allPositive = true;
         }
+
     }
 }
