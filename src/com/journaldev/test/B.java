@@ -6,7 +6,7 @@ import static com.journaldev.test.A.foo;
 public class B {
 
     public static void main(String[] args) {
-        System.out.println(MAX);  // normally A.MAX
-        foo();                    // normally A.foo()
+        System.out.println(MAX);  // normally ClassA.MAX
+        foo();                    // normally ClassA.foo()
     }
 }

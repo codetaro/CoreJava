@@ -3,7 +3,7 @@ package com.journaldev.util;
 public class JavaBreak {
 
     public static void main(String[] args) {
-        String[] arr = {"A", "E", "I", "O", "U"};
+        String[] arr = {"ClassA", "E", "I", "O", "U"};
 
         // find O in the array using for loop
         for (int len = 0; len < arr.length; len++) {
