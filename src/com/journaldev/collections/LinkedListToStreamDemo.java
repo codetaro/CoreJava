@@ -1,10 +1,9 @@
 package com.journaldev.collections;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LinkedListToJavaArrayDemo {
+public class LinkedListToStreamDemo {
 
     public static void main(String[] args) {
         List<Integer> numbersList = new LinkedList<>();
@@ -13,9 +12,8 @@ public class LinkedListToJavaArrayDemo {
         numbersList.add(3);
         numbersList.add(4);
         numbersList.add(5);
-        Integer[] numbers = new Integer[numbersList.size()];
 
-        numbers = numbersList.toArray(numbers);
-        System.out.println(Arrays.toString(numbers));
+        // convert List to stream
+        numbersList.stream().forEach(System.out::println);
     }
 }
