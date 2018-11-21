@@ -18,6 +18,6 @@ public class GenericsType<T> {
 
         GenericsType type1 = new GenericsType(); // raw type
         type1.set("Pankaj");
-        type1.set(10);
+        type1.set(10); // valid and autoboxing support
     }
 }

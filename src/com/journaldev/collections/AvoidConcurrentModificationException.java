@@ -4,10 +4,15 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ConcurrentModificationExceptionExample {
+public class AvoidConcurrentModificationException {
 
     public static void main(String[] args) {
-//        List<String> myList = new ArrayList<String>();
+//        testCopyOnWriteArrayList();
+        testConcurrentHashMap();
+    }
+
+    private static void testCopyOnWriteArrayList() {
+        //        List<String> myList = new ArrayList<String>();
         List<String> myList = new CopyOnWriteArrayList<String>();
 
         myList.add("1");
@@ -21,15 +26,16 @@ public class ConcurrentModificationExceptionExample {
             String value = it.next();
             System.out.println("List Value:" + value);
             if (value.equals("3")) {
-//                myList.remove(value);
                 myList.remove("4");
                 myList.add("6");
                 myList.add("7");
             }
         }
         System.out.println("List Size:" + myList.size());
+    }
 
-//        Map<String, String> myMap = new HashMap<String, String>();
+    private static void testConcurrentHashMap() {
+        //        Map<String, String> myMap = new HashMap<String, String>();
         Map<String, String> myMap = new ConcurrentHashMap<String, String>();
         myMap.put("1", "1");
         myMap.put("2", "2");
@@ -39,10 +45,8 @@ public class ConcurrentModificationExceptionExample {
         while (it1.hasNext()) {
             String key = it1.next();
             System.out.println("Map Value:" + myMap.get(key));
-            if (key.equals("1")) {
-//                myMap.put("1", "4");
-//                myMap.put("4", "4");
-                myMap.remove("3");
+            if (key.equals("3")) {
+                myMap.remove("2");
                 myMap.put("4", "4");
                 myMap.put("5", "5");
             }

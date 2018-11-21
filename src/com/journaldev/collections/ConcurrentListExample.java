@@ -18,6 +18,11 @@ public class ConcurrentListExample {
 
         Iterator<String> it = list.iterator();
 
+        /*
+         * CopyOnWriteArrayList allows the modification of list,
+         * but it doesn't change the iterator and we get same
+         * elements as it was on original list.
+         */
         while (it.hasNext()) {
             System.out.println("list is:" + list);
             String str = it.next();
