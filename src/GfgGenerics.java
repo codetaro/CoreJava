@@ -1,8 +1,13 @@
-public class Main {
+public class GfgGenerics {
+
+    static <T> void genericDisplay(T element) {
+        System.out.println(element.getClass().getName() + " = " + element);
+    }
 
     public static void main(String[] args) {
-        Test<String, Integer> obj = new Test<>("GFG", 15);
-        obj.print();
+        genericDisplay(11);
+        genericDisplay("GeeksForGeeks");
+        genericDisplay(1.0);
     }
 }
 
