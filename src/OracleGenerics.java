@@ -1,7 +1,12 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class OracleGenerics {
 
     public static void main(String[] args) {
 
+        /*
         // Type inference works in Java SE 7 and later
         Box<Integer> integerBox = new Box<>();
 
@@ -22,6 +27,26 @@ public class OracleGenerics {
         Box<Integer> integerBox1 = new Box<>();
         integerBox1.set(new Integer(10));
 //        integerBox1.inspect("some text");
+        */
+
+        ArrayList<Box<Integer>> listOfIntegerBoxes =
+                new ArrayList<>();
+        OracleGenerics.<Integer>addBox(Integer.valueOf(10), listOfIntegerBoxes);
+        OracleGenerics.addBox(Integer.valueOf(20), listOfIntegerBoxes);
+        OracleGenerics.addBox(Integer.valueOf(30), listOfIntegerBoxes);
+        OracleGenerics.outputBoxes(listOfIntegerBoxes);
+
+        // Upper bounded wildcards
+        List<Integer> li = Arrays.asList(1, 2, 3);
+        System.out.println("sum = " + sumOfList(li));
+
+        List<Double> ld = Arrays.asList(1.2, 2.3, 3.5);
+        System.out.println("sum = " + sumOfList(ld));
+
+        // Unbounded wildcards
+        List<String> ls = Arrays.asList("one", "two", "three");
+        printList(li);
+        printList(ls);
     }
 
     static Box createBox() {
@@ -34,6 +59,35 @@ public class OracleGenerics {
             if (e.compareTo(elem) > 0)
                 ++count;
         return count;
+    }
+
+    public static <U> void addBox(U u, List<Box<U>> boxes) {
+        Box<U> box = new Box<>();
+        box.set(u);
+        boxes.add(box);
+    }
+
+    public static <U> void outputBoxes(List<Box<U>> boxes) {
+        int counter = 0;
+        for (Box<U> box : boxes) {
+            U boxContents = box.get();
+            System.out.println("Box #" + counter + " contains [" +
+                    boxContents.toString() + "]");
+            counter++;
+        }
+    }
+
+    public static double sumOfList(List<? extends Number> list) {
+        double s = 0.0;
+        for (Number n : list)
+            s += n.doubleValue();
+        return s;
+    }
+
+    public static void printList(List<?> list) {
+        for (Object elem : list)
+            System.out.println(elem + " ");
+        System.out.println();
     }
 }
 
