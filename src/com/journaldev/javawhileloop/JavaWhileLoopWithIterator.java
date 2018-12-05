@@ -15,7 +15,7 @@ public class JavaWhileLoopWithIterator {
 
         Iterator<String> it = veggies.iterator();
 
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
     }

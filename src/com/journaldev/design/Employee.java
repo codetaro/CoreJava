@@ -6,22 +6,22 @@ public class Employee extends Person {
 
     public Employee(String nm, String gen, int id) {
         super(nm, gen);
-        this.empId=id;
+        this.empId = id;
     }
 
     @Override
     public void work() {
-        if(empId == 0){
+        if (empId == 0) {
             System.out.println("Not working");
-        }else{
+        } else {
             System.out.println("Working as employee!!");
         }
     }
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
         //coding in terms of abstract classes
-        Person student = new Employee("Dove","Female",0);
-        Person employee = new Employee("Pankaj","Male",123);
+        Person student = new Employee("Dove", "Female", 0);
+        Person employee = new Employee("Pankaj", "Male", 123);
         student.work();
         employee.work();
         //using method implemented in abstract class - inheritance

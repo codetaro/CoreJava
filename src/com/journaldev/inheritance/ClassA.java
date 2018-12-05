@@ -8,7 +8,7 @@ public class ClassA extends SuperClass {
     }
 
     //ClassA own method
-    public void methodA(){
+    public void methodA() {
 
     }
 }

@@ -13,7 +13,7 @@ public class HashSetEqualsMethodImportance {
 
         System.out.println(emps);
 
-        Emp e = new Emp(3,"Lisa");
+        Emp e = new Emp(3, "Lisa");
         emps.add(e);
         System.out.println(emps);
 

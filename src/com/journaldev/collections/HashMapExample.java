@@ -9,18 +9,18 @@ public class HashMapExample {
 
     public static void main(String[] args) {
 
-        Map<String,String> map = new HashMap<>();
+        Map<String, String> map = new HashMap<>();
 
-        map.put("1","1");
-        map.put("2","2");
-        map.put("3","3");
-        map.put("4",null);
-        map.put(null,"100");
+        map.put("1", "1");
+        map.put("2", "2");
+        map.put("3", "3");
+        map.put("4", null);
+        map.put(null, "100");
 
         String value = map.get("3");
         System.out.println("Key = 3, Value = " + value);
 
-        value = map.getOrDefault("5","Default Value");
+        value = map.getOrDefault("5", "Default Value");
         System.out.println("Key = 5, Value = " + value);
 
         boolean keyExists = map.containsKey(null);
@@ -28,12 +28,12 @@ public class HashMapExample {
 
         System.out.println("keyExists=" + keyExists + ", valueExists=" + valueExists);
 
-        Set<Map.Entry<String,String>> entrySet = map.entrySet();
+        Set<Map.Entry<String, String>> entrySet = map.entrySet();
         System.out.println(entrySet);
 
         System.out.println("map size=" + map.size());
 
-        Map<String,String> map1 = new HashMap<>();
+        Map<String, String> map1 = new HashMap<>();
         map1.putAll(map);
         System.out.println("map1 mappings= " + map1);
 

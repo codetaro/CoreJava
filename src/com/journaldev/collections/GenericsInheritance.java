@@ -12,5 +12,6 @@ public class GenericsInheritance {
         obj = myClass1; // MyClass<T> parent is Object
     }
 
-    public static class MyClass<T> {}
+    public static class MyClass<T> {
+    }
 }

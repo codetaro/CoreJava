@@ -22,8 +22,10 @@ public class HashSetExample {
         System.out.println("fruits set size = " + fruits.size());
 
         List<String> list = new ArrayList<>();
-        list.add("Apple");list.add("Apple");
-        list.add("Banana");list.add("Mango");
+        list.add("Apple");
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Mango");
 
         System.out.println("fruits set before addAll = " + fruits);
         System.out.println("list = " + list);
@@ -31,7 +33,7 @@ public class HashSetExample {
         System.out.println("fruits set after addAll = " + fruits);
 
         Iterator<String> iterator = fruits.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println("Consuming fruit " + iterator.next());
         }
 

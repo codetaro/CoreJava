@@ -11,13 +11,13 @@ public class DataTypes {
         System.out.println(c1); //prints A
 
         char c2 = 0;
-        System.out.println("Default Value:"+c2+":"); // prints Default Value: :
+        System.out.println("Default Value:" + c2 + ":"); // prints Default Value: :
 
         char c3 = 65;
         System.out.println(c3); //prints A
 
         char c4 = '\t';
-        System.out.println("Tab Start:"+c4+":End"); //prints Tab Start:	:End
+        System.out.println("Tab Start:" + c4 + ":End"); //prints Tab Start:	:End
 
         byte b = 10;
         System.out.println(b); //prints 10

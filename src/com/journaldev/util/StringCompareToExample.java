@@ -4,6 +4,7 @@ public class StringCompareToExample {
 
     /**
      * This class show String compareTo examples
+     *
      * @param args
      */
     public static void main(String[] args) {

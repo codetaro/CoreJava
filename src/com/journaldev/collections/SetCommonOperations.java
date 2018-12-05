@@ -26,7 +26,10 @@ public class SetCommonOperations {
         System.out.println("letters set size = " + vowels.size());
 
         vowels.clear();
-        vowels.add("E");vowels.add("E");vowels.add("I");vowels.add("O");
+        vowels.add("E");
+        vowels.add("E");
+        vowels.add("I");
+        vowels.add("O");
         System.out.println("Given set contains E element or not? " + vowels.contains("E"));
     }
 }

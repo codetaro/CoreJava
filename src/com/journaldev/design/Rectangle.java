@@ -5,10 +5,11 @@ public class Rectangle implements Shape {
     private double width;
     private double height;
 
-    public Rectangle(double w, double h){
-        this.width=w;
-        this.height=h;
+    public Rectangle(double w, double h) {
+        this.width = w;
+        this.height = h;
     }
+
     @Override
     public void draw() {
         System.out.println("Drawing Rectangle");
@@ -16,6 +17,6 @@ public class Rectangle implements Shape {
 
     @Override
     public double getArea() {
-        return this.height*this.width;
+        return this.height * this.width;
     }
 }

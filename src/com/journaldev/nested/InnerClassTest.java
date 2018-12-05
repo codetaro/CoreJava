@@ -1,21 +1,23 @@
 package com.journaldev.nested;
 
-import java.util.Arrays;
-//nested classes can be used in import for easy instantiation
 import com.journaldev.nested.OuterClass.InnerClass;
 import com.journaldev.nested.OuterClass.StaticNestedClass;
+
+import java.util.Arrays;
+
+//nested classes can be used in import for easy instantiation
 
 public class InnerClassTest {
 
     public static void main(String[] args) {
-        OuterClass outer = new OuterClass(1,2,3,4);
+        OuterClass outer = new OuterClass(1, 2, 3, 4);
 
         //static nested classes example
         StaticNestedClass staticNestedClass = new StaticNestedClass();
         StaticNestedClass staticNestedClass1 = new StaticNestedClass();
 
         System.out.println(staticNestedClass.getName());
-        staticNestedClass.d=10;
+        staticNestedClass.d = 10;
         System.out.println(staticNestedClass.d);
         System.out.println(staticNestedClass1.d);
 

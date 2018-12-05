@@ -5,16 +5,16 @@ import java.util.List;
 
 public class WrapperClasses {
 
-    private static void doSomething(Object obj){
+    private static void doSomething(Object obj) {
 
     }
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
         int i = 10;
         char c = 'a';
 
         //primitives are simple to use
-        int j = i+3;
+        int j = i + 3;
 
         //polymorphism achieved by Wrapper classes, we can't pass primitive here
         doSomething(new Character(c));

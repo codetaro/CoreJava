@@ -1,7 +1,5 @@
 package com.journaldev.access;
 
-import com.journaldev.access.TestA;
-
 public class TestB {
 
     public static void main(String args[]) {

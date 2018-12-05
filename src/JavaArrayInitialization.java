@@ -19,8 +19,8 @@ public class JavaArrayInitialization {
         twoIntArr[1] = new int[3];
 
         // array initialization using shortcut syntax
-        int[] arrI = {1,2,3};
-        int[][] arrI2 = {{1,2},{1,2,3}};
+        int[] arrI = {1, 2, 3};
+        int[][] arrI2 = {{1, 2}, {1, 2, 3}};
 
         /* strongly discourage */
         int[] twoArrInt1[] = new int[4][5];

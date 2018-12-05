@@ -8,9 +8,10 @@ public class Animal {
 
     private int noOfLegs;
 
-    public Animal(){}
+    public Animal() {
+    }
 
-    public Animal(boolean veg, String food, int legs){
+    public Animal(boolean veg, String food, int legs) {
         this.vegetarian = veg;
         this.eats = food;
         this.noOfLegs = legs;
