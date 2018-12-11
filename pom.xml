@@ -8,6 +8,11 @@
     <artifactId>CoreJava</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <src.dir>src</src.dir>
+        <out.dir>out</out.dir>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -19,6 +24,8 @@
                 </configuration>
             </plugin>
         </plugins>
+        <sourceDirectory>${src.dir}</sourceDirectory>
+        <outputDirectory>${out.dir}</outputDirectory>
     </build>
 
     <dependencies>
