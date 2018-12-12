@@ -31,6 +31,9 @@ public class JavaFileScanner {
         scanner.close();
 
         // read from system input
+        System.out.println("Read from system input:");
+        scanner = new Scanner(System.in);
+        System.out.println("Input first word: " + scanner.next());
     }
 
     private static Employee parseCSVLine(String line) {
@@ -39,7 +42,7 @@ public class JavaFileScanner {
         String name = scanner.next();
         int age = scanner.nextInt();
         String gender = scanner.next();
-        return new Employee(name,age,gender);
+        return new Employee(name, age, gender);
     }
 }
 
@@ -56,6 +59,6 @@ class Employee {
 
     @Override
     public String toString() {
-        return "Name="+this.name+"::Age="+this.age+"::Gender="+this.gender;
+        return "Name=" + this.name + "::Age=" + this.age + "::Gender=" + this.gender;
     }
 }
