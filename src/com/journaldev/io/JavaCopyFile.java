@@ -17,7 +17,7 @@ public class JavaCopyFile {
         copyFileUsingStream(source, dest);
         System.out.println("Time taken by Stream Copy = " + (System.nanoTime() - start));
 
-        // copy file using java.nio FileChannel
+        // copy file using javacontinue.nio FileChannel
         source = new File("tmp/sourceChannel.avi");
         dest = new File("tmp/destChannel.avi");
         start = System.nanoTime();
