@@ -14,7 +14,7 @@ public class PropertyFilesUtil {
         writePropertyFile(propertyFileName, xmlFileName);
         readPropertyFile(propertyFileName, xmlFileName);
         readAllKeys(propertyFileName, xmlFileName);
-        readPropertyFileFromClasspath(propertyFileName);
+//        readPropertyFileFromClasspath(propertyFileName);
     }
 
     /**
@@ -69,6 +69,7 @@ public class PropertyFilesUtil {
 
     /**
      * read all the keys from the given property files
+     *
      * @param propertyFileName
      * @param xmlFileName
      * @throws IOException
@@ -80,7 +81,7 @@ public class PropertyFilesUtil {
         prop.load(reader);
         Set<Object> keys = prop.keySet();
         for (Object obj : keys) {
-            System.out.println(propertyFileName + ":: Key="+obj.toString()+"::value="+prop.getProperty(obj.toString()));
+            System.out.println(propertyFileName + ":: Key=" + obj.toString() + "::value=" + prop.getProperty(obj.toString()));
         }
         // loading xml file now, first clear existing properties
         prop.clear();
@@ -88,7 +89,7 @@ public class PropertyFilesUtil {
         prop.loadFromXML(is);
         keys = prop.keySet();
         for (Object obj : keys) {
-            System.out.println(xmlFileName + ":: Key="+obj.toString()+"::value="+prop.getProperty(obj.toString()));
+            System.out.println(xmlFileName + ":: Key=" + obj.toString() + "::value=" + prop.getProperty(obj.toString()));
         }
         // free all resources
         is.close();
@@ -98,6 +99,7 @@ public class PropertyFilesUtil {
 
     /**
      * read property file from classpath
+     *
      * @param propertyFileName
      * @throws IOException
      */
@@ -106,8 +108,8 @@ public class PropertyFilesUtil {
         prop.load(PropertyFilesUtil.class.getClassLoader().getResourceAsStream(propertyFileName));
 
         System.out.println(propertyFileName + " loaded from Classpath::db.host = " + prop.getProperty("db.host"));
-        System.out.println(propertyFileName + " loaded from Classpath::db.user = "+prop.getProperty("db.user"));
-        System.out.println(propertyFileName + " loaded from Classpath::db.pwd = "+prop.getProperty("db.pwd"));
-        System.out.println(propertyFileName + " loaded from Classpath::XYZ = "+prop.getProperty("XYZ"));
+        System.out.println(propertyFileName + " loaded from Classpath::db.user = " + prop.getProperty("db.user"));
+        System.out.println(propertyFileName + " loaded from Classpath::db.pwd = " + prop.getProperty("db.pwd"));
+        System.out.println(propertyFileName + " loaded from Classpath::XYZ = " + prop.getProperty("XYZ"));
     }
 }

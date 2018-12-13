@@ -1,8 +1,6 @@
 package com.journaldev.io;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +9,10 @@ import java.util.Scanner;
 public class CSVScannerExample {
 
     public static void main(String[] args) throws IOException {
-Scanner scanner = new Scanner(new File("tmp/employees.csv"));
-Scanner dataScanner = null;
-int index = 0;
-List<Employee2> empList = new ArrayList<>();
+        Scanner scanner = new Scanner(new File("tmp/employees.csv"));
+        Scanner dataScanner = null;
+        int index = 0;
+        List<Employee2> empList = new ArrayList<>();
 
         while (scanner.hasNextLine()) {
             dataScanner = new Scanner(scanner.nextLine());

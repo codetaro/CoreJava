@@ -7,8 +7,8 @@ public class JavaTempFile {
 
     public static void main(String[] args) {
         try {
-            File tmpFile = File.createTempFile("data",null);
-            File newFile = File.createTempFile("text",".temp",new File("tmp"));
+            File tmpFile = File.createTempFile("data", null);
+            File newFile = File.createTempFile("text", ".temp", new File("tmp"));
 
             System.out.println(tmpFile.getCanonicalPath());
             System.out.println(newFile.getCanonicalPath());

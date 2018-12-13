@@ -16,7 +16,7 @@ public class RenameFileJava {
         }
 
         // relative path rename file
-        file = new File("DB.properties");
+        file = new File("com/journaldev/io/DB.properties");
         newFile = new File("DB_New.properties");
         if (file.renameTo(newFile)) {
             System.out.println("File rename success");

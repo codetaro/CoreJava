@@ -29,6 +29,7 @@ public class JavaDownloadFileFromURL {
         fos.close();
         rbc.close();
     }
+
     private static void downloadUsingStream(String urlStr, String file) throws IOException {
         URL url = new URL(urlStr);
         BufferedInputStream bis = new BufferedInputStream(url.openStream());

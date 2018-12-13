@@ -104,6 +104,6 @@ class Employee2 {
 
     @Override
     public String toString() {
-        return "\nID="+getId()+"::Name"+getName()+"::Role="+getRole()+"::Salary="+getSalary();
+        return "\nID=" + getId() + "::Name" + getName() + "::Role=" + getRole() + "::Salary=" + getSalary();
     }
 }
