@@ -1,4 +1,4 @@
-package com.journaldev.javaforloop;
+package com.journaldev.loop;
 
 public class JavaForLoop {
 

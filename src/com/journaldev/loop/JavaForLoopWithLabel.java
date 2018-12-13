@@ -1,8 +1,8 @@
-package com.journaldev.javacontinue;
+package com.journaldev.loop;
 
 import java.util.Arrays;
 
-public class JavaContinueLabel {
+public class JavaForLoopWithLabel {
 
     public static void main(String[] args) {
 
@@ -19,10 +19,9 @@ public class JavaContinueLabel {
             }
             if (allPositive) {
                 // process the array
-                System.out.println("Processing the array of all positive ints. " + Arrays.toString(intArr[i]));
+                System.out.println("Processing " + Arrays.toString(intArr[i]));
             }
             allPositive = true;
         }
-
     }
 }

@@ -1,13 +1,13 @@
-package com.journaldev.javadowhileloop;
+package com.journaldev.loop;
 
-public class JavaDoWhileLoop {
+public class JavaWhileLoop {
 
     public static void main(String[] args) {
 
         int i = 5;
-        do {
+        while (i <= 10) {
             System.out.println(i);
             i++;
-        } while (i <= 10);
+        }
     }
 }

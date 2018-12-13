@@ -7,7 +7,7 @@ public class RenameFileJava {
     public static void main(String[] args) {
 
         // absolute path rename file
-        File file = new File("/home/dennisyuan/javacontinue.txt");
+        File file = new File("/home/dennisyuan/loop.txt");
         File newFile = new File("/home/dennisyuan/java1.txt");
         if (file.renameTo(newFile)) {
             System.out.println("File rename success");
@@ -24,7 +24,7 @@ public class RenameFileJava {
             System.out.println("File rename failed");
         }
 
-        // javacontinue move file from one directory to another
+        // loop move file from one directory to another
         file = new File("/home/dennisyuan/DB.properties");
         newFile = new File("DB_Move.properties");
         if (file.renameTo(newFile)) {

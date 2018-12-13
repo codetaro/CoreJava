@@ -29,7 +29,7 @@ public class InnerClassTest {
         outer.print("Outer");
 
         //calling method using anonymous inner class
-        System.out.println(Arrays.toString(outer.getFilesInDir("src/com/journaldev/nested", ".javacontinue")));
+        System.out.println(Arrays.toString(outer.getFilesInDir("src/com/journaldev/nested", ".loop")));
 
         System.out.println(Arrays.toString(outer.getFilesInDir("bin/com/journaldev/nested", ".class")));
     }

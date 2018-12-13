@@ -6,7 +6,7 @@ public class GetFileExtension {
 
     public static void main(String[] args) {
 
-        File file = new File("/home/dennis/javacontinue.txt");
+        File file = new File("/home/dennis/loop.txt");
         System.out.println("File extension is: " + getFileExtension(file));
 
         // file name without extension
@@ -14,7 +14,7 @@ public class GetFileExtension {
         System.out.println("File extension is: " + getFileExtension(file));
 
         // file name with dot
-        file = new File("/home/dennis/javacontinue.util.txt");
+        file = new File("/home/dennis/loop.util.txt");
         System.out.println("File extension is: " + getFileExtension(file));
 
         // hidden files without extension

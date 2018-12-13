@@ -16,7 +16,7 @@ public class JavaArrayOfArrayList {
         l2.add("4");
         l2.add("5");
 
-        // javacontinue doesn't support generic array
+        // loop doesn't support generic array
 //        List<String>[] arrayOfList = new List<String>[2];
         List<String>[] arrayOfList = new List[2];
         arrayOfList[0] = l1;

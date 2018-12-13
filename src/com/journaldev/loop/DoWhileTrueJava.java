@@ -1,4 +1,4 @@
-package com.journaldev.javadowhileloop;
+package com.journaldev.loop;
 
 public class DoWhileTrueJava {
 

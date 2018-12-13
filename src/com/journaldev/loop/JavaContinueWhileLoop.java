@@ -1,4 +1,4 @@
-package com.journaldev.javacontinue;
+package com.journaldev.loop;
 
 public class JavaContinueWhileLoop {
 

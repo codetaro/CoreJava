@@ -10,7 +10,7 @@ public class JavaStringSplit {
      * @param args
      */
     public static void main(String[] args) {
-        String line = "I am a javacontinue developer";
+        String line = "I am a loop developer";
 
         String[] words = line.split(" ");
 
@@ -21,7 +21,7 @@ public class JavaStringSplit {
         System.out.println("String split into two: " + Arrays.toString(twoWords));
 
         // split string delimited with special characters
-        String wordsWithNumbers = "I|am|a|javacontinue|developer";
+        String wordsWithNumbers = "I|am|a|loop|developer";
 
         String[] numbers = wordsWithNumbers.split("\\|");
 

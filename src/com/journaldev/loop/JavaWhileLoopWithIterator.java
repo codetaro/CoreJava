@@ -1,4 +1,4 @@
-package com.journaldev.javawhileloop;
+package com.journaldev.loop;
 
 import java.util.ArrayList;
 import java.util.Iterator;
