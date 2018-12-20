@@ -1,5 +1,10 @@
 package com.journaldev.concurrency;
 
+import java.util.Date;
+
+/**
+ * a simple Runnable class that takes around 5 seconds to execute its task
+ */
 public class WorkerThread implements Runnable {
 
     private String command;
@@ -10,9 +15,9 @@ public class WorkerThread implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + " Start. Command = " + command);
+        System.out.println(Thread.currentThread().getName() + " Start. Command = " + command + ". Time = " + new Date());
         processCommand();
-        System.out.println(Thread.currentThread().getName() + " End.");
+        System.out.println(Thread.currentThread().getName() + " End. Time = " + new Date());
     }
 
     private void processCommand() {
