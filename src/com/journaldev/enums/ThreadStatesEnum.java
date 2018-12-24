@@ -39,7 +39,7 @@ public enum ThreadStatesEnum implements Closeable {
     public abstract String getDetail();
 
     // Enum constructor should always be private
-    private ThreadStatesEnum(int i) {
+    ThreadStatesEnum(int i) {
         priority = i;
     }
 

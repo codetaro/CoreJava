@@ -11,8 +11,8 @@ public class TestStatic {
         StaticExample se = new StaticExample();
         System.out.println(se.getCount());
         // class and instance static variables are same
-        System.out.println(StaticExample.str + " is same as " + se.str);
-        System.out.println(StaticExample.str == se.str);
+        System.out.println(StaticExample.str + " is same as " + StaticExample.str);
+        System.out.println(StaticExample.str == StaticExample.str);
 
         // static nested classes are like normal top-level classes
         StaticExample.MyStaticClass myStaticClass = new StaticExample.MyStaticClass();

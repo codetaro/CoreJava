@@ -13,7 +13,7 @@ public class GenericsMethods {
         GenericsType<String> g2 = new GenericsType<>();
         g2.set("Pankaj");
 
-        boolean isEqual = GenericsMethods.<String>isEqual(g1, g2);
+        boolean isEqual = GenericsMethods.isEqual(g1, g2);
         // type inference
         isEqual = GenericsMethods.isEqual(g1, g2);
     }

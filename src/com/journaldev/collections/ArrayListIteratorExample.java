@@ -14,7 +14,7 @@ public class ArrayListIteratorExample {
         Iterator<Integer> it = ints.iterator();
 
         while (it.hasNext()) {
-            int x = (int) it.next();
+            int x = it.next();
             System.out.print(x + ", ");
         }
         System.out.println("\n" + ints);
@@ -22,7 +22,7 @@ public class ArrayListIteratorExample {
         // modification
         it = ints.iterator();
         while (it.hasNext()) {
-            int x = (int) it.next();
+            int x = it.next();
             if (x % 2 == 0) it.remove();
         }
         System.out.println(ints);
@@ -30,7 +30,7 @@ public class ArrayListIteratorExample {
         // changing list structure while iterating
         it = ints.iterator();
         while (it.hasNext()) {
-            int x = (int) it.next();
+            int x = it.next();
 //            if (x == 5) ints.add(20);
         }
     }

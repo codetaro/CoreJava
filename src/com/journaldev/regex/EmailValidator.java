@@ -15,6 +15,7 @@ public class EmailValidator {
 
     /**
      * This method validates the input email address with EMAIL_REGEX pattern
+     *
      * @param email
      * @return boolean
      */

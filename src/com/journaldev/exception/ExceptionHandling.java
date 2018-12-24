@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class ExceptionHandling {
 
-    public static void main(String[] args) throws FileNotFoundException, IOException {
+    public static void main(String[] args) throws IOException {
         try {
             testException(-5);
             testException(-10);
@@ -19,7 +19,7 @@ public class ExceptionHandling {
         testException(15);
     }
 
-    private static void testException(int i) throws FileNotFoundException, IOException {
+    private static void testException(int i) throws IOException {
         if (i < 0) {
             FileNotFoundException myException = new FileNotFoundException("Negative Integer " + i);
             throw myException;

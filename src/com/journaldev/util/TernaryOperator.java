@@ -30,7 +30,7 @@ public class TernaryOperator {
     }
 
     private static boolean invertBoolean(boolean b) {
-        return b ? false : true;
+        return !b;
     }
 
     private static int getAbsoluteValue(int i) {

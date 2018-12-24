@@ -14,7 +14,7 @@ public class ThreadLocalExample implements Runnable {
                 }
             };
     private static final ThreadLocal<SimpleDateFormat> formatter8 =
-            ThreadLocal.<SimpleDateFormat>withInitial(
+            ThreadLocal.withInitial(
                     () -> {
                         return new SimpleDateFormat("yyyyMMdd HHmm");
                     }

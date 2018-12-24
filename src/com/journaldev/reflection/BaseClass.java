@@ -23,8 +23,10 @@ public class BaseClass {
     }
 
     // inner public class
-    public class BaseClassInnerClass {}
+    public class BaseClassInnerClass {
+    }
 
     // member public enum
-    public enum BaseClassMemberEnum {}
+    public enum BaseClassMemberEnum {
+    }
 }

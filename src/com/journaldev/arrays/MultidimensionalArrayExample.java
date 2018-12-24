@@ -29,7 +29,7 @@ public class MultidimensionalArrayExample {
             for (int j = 0; j < arrInt[i].length; j++) {
                 System.out.print(arrInt[i][j] + " ");
             }
-            System.out.println("");
+            System.out.println();
         }
 
         int[][] arrMulti = new int[2][];
@@ -46,7 +46,7 @@ public class MultidimensionalArrayExample {
             for (int j = 0; j < arrMulti[i].length; j++) {
                 System.out.print(arrMulti[i][j] + " ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }

@@ -2,7 +2,7 @@ package com.journaldev.access;
 
 public class TestB {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         TestA.methodPublic();
         TestA.methodProtected();
         TestA.methodDefault();

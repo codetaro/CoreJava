@@ -34,7 +34,7 @@ public class JavaReadFile {
         String utf8;
         System.out.println("Reading text file using RandomAccessFile");
         while ((line = file.readLine()) != null) {
-            utf8 = new String(line.getBytes("ISO-8859-1"), "UTF-8");
+            utf8 = new String(line.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
             System.out.println(utf8);
         }
         file.close();

@@ -31,7 +31,7 @@ public class OracleGenerics {
 
         ArrayList<Box<Integer>> listOfIntegerBoxes =
                 new ArrayList<>();
-        OracleGenerics.<Integer>addBox(Integer.valueOf(10), listOfIntegerBoxes);
+        OracleGenerics.addBox(Integer.valueOf(10), listOfIntegerBoxes);
         OracleGenerics.addBox(Integer.valueOf(20), listOfIntegerBoxes);
         OracleGenerics.addBox(Integer.valueOf(30), listOfIntegerBoxes);
         OracleGenerics.outputBoxes(listOfIntegerBoxes);
@@ -115,9 +115,9 @@ class Box<T> {
 }
 
 interface Pair<K, V> {
-    public K getKey();
+    K getKey();
 
-    public V getValue();
+    V getValue();
 }
 
 class OrderedPair<K, V> implements Pair<K, V> {

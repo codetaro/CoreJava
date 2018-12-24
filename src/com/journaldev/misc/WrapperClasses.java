@@ -9,7 +9,7 @@ public class WrapperClasses {
 
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int i = 10;
         char c = 'a';
 

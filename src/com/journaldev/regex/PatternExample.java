@@ -18,9 +18,9 @@ public class PatternExample {
         System.out.println("Using Pattern matches method: " + Pattern.matches(".bb", str));
 
         // capturing groups
-        System.out.println(Pattern.matches("(\\w\\d)\\1","a2a2"));
-        System.out.println(Pattern.matches("(\\w\\d)\\1","a2b2"));  // Backreference
-        System.out.println(Pattern.matches("(AB)(B\\d)\\2\\1","ABB2B2AB"));
-        System.out.println(Pattern.matches("(AB)(B\\d)\\2\\1","ABB2B3AB"));  // Backreference
+        System.out.println(Pattern.matches("(\\w\\d)\\1", "a2a2"));
+        System.out.println(Pattern.matches("(\\w\\d)\\1", "a2b2"));  // Backreference
+        System.out.println(Pattern.matches("(AB)(B\\d)\\2\\1", "ABB2B2AB"));
+        System.out.println(Pattern.matches("(AB)(B\\d)\\2\\1", "ABB2B3AB"));  // Backreference
     }
 }

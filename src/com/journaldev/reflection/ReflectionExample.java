@@ -1,26 +1,11 @@
 package com.journaldev.reflection;
 
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.lang.reflect.Type;
-import java.lang.reflect.TypeVariable;
+import java.lang.reflect.*;
 import java.util.Arrays;
 
 public class ReflectionExample {
 
-    public static void main(String[] args) throws ClassNotFoundException {
-//        getClassObject();
-//        getSuperClass();
-//        getPublicMemberClasses();
-//        getDeclaredClasses();
-//        getDeclaringClass();
-//        getPackageName();
-//        getClassModifiers();
-//        getTypeParameters();
-//        getImplementedInterfaces();
-        getAllPublicMethods();
-    }
-
+    // reflection for classes
     private static void getClassObject() throws ClassNotFoundException {
 
         // Get Class using reflection
@@ -118,6 +103,97 @@ public class ReflectionExample {
     }
 
     private static void getAllPublicConstructors() throws ClassNotFoundException {
-        // TODO
+        Constructor<?>[] publicConstructors =
+                Class.forName("com.journaldev.reflection.ConcreteClass").getConstructors();
+        System.out.println(Arrays.toString(publicConstructors));
+    }
+
+    private static void getAllPublicFields() throws ClassNotFoundException {
+        Field[] publicFields =
+                Class.forName("com.journaldev.reflection.ConcreteClass").getFields();
+        System.out.println(Arrays.toString(publicFields));
+    }
+
+    private static void getAllAnnotations() throws ClassNotFoundException {
+        java.lang.annotation.Annotation[] annotations =
+                Class.forName("com.journaldev.reflection.ConcreteClass").getAnnotations();
+        System.out.println(Arrays.toString(annotations));
+    }
+
+    // reflection for fields
+    public static void getPublicField() throws ClassNotFoundException, NoSuchFieldException {
+        Field field = Class.forName("com.journaldev.reflection.ConcreteClass").getField("interfaceInt");
+        System.out.println(field);
+    }
+
+    public static void getFieldDeclaringClass() {
+        try {
+            Field field =
+                    Class.forName("com.journaldev.reflection.ConcreteClass").getField("interfaceInt");
+            Class<?> fieldClass = field.getDeclaringClass();
+            System.out.println(fieldClass.getCanonicalName());
+        } catch (NoSuchFieldException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void getFieldType() throws ClassNotFoundException, NoSuchFieldException {
+        Field field =
+                Class.forName("com.journaldev.reflection.ConcreteClass").getField("publicInt");
+        Class<?> fieldType = field.getType();
+        System.out.println(fieldType.getCanonicalName());
+    }
+
+    public static void accessPublicFieldValue() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+        Field field =
+                Class.forName("com.journaldev.reflection.ConcreteClass").getField("publicInt");
+
+        ConcreteClass obj = new ConcreteClass(5);
+        System.out.println(field.get(obj));
+        field.setInt(obj, 10);
+        System.out.println(field.get(obj));
+    }
+
+    /**
+     * using reflection we can get/set the private field value by turning off
+     * the java access check for field modifiers
+     *
+     * @throws ClassNotFoundException
+     * @throws NoSuchFieldException
+     * @throws IllegalAccessException
+     */
+    public static void accessPrivateFieldValue() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+        Field privateField =
+                Class.forName("com.journaldev.reflection.ConcreteClass").getDeclaredField("privateString");
+
+        // turning off access check with below method call
+        privateField.setAccessible(true);
+        ConcreteClass objTest = new ConcreteClass(1);
+        System.out.println(privateField.get(objTest));
+
+        privateField.set(objTest, "private string updated");
+        System.out.println(privateField.get(objTest));
+    }
+
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+//        getClassObject();
+//        getSuperClass();
+//        getPublicMemberClasses();
+//        getDeclaredClasses();
+//        getDeclaringClass();
+//        getPackageName();
+//        getClassModifiers();
+//        getTypeParameters();
+//        getImplementedInterfaces();
+//        getAllPublicMethods();
+//        getAllPublicConstructors();
+//        getAllPublicFields();
+//        getAllAnnotations();
+
+//        getPublicField();
+//        getFieldDeclaringClass();
+//        getFieldType();
+//        accessPublicFieldValue();
+//        accessPrivateFieldValue();
     }
 }

@@ -23,7 +23,7 @@ public class JavaArrayInitialization {
         int[][] arrI2 = {{1, 2}, {1, 2, 3}};
 
         /* strongly discourage */
-        int[] twoArrInt1[] = new int[4][5];
-        int twoIntArr2[][] = new int[5][];
+        int[][] twoArrInt1 = new int[4][5];
+        int[][] twoIntArr2 = new int[5][];
     }
 }

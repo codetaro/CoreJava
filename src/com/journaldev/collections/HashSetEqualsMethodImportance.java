@@ -37,9 +37,8 @@ class Emp {
     public boolean equals(Object obj) {
         if (obj == null || !(obj instanceof Emp)) return false;
         Emp e = (Emp) obj;
-        if (e.getId() == this.getId() &&
-                e.getName().equals(this.getName())) return true;
-        return false;
+        return e.getId() == this.getId() &&
+                e.getName().equals(this.getName());
     }
 
     @Override

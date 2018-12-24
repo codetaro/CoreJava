@@ -25,7 +25,7 @@ public class JavaStringArrayToString {
         StringBuilder b = new StringBuilder();
         b.append('[');
         for (int i = 0; ; i++) {
-            b.append(String.valueOf(a[i]));
+            b.append(a[i]);
             if (i == iMax)
                 return b.append(']').toString();
             b.append(", ");

@@ -14,21 +14,21 @@ public class ListIteratorExample {
         Iterator<Integer> iterator = list.iterator();
 
         while (iterator.hasNext()) {
-            int i = (int) iterator.next();
+            int i = iterator.next();
             System.out.print(i + ", ");
         }
         System.out.println("\n" + list);
 
         iterator = list.iterator();
         while (iterator.hasNext()) {
-            int x = (int) iterator.next();
+            int x = iterator.next();
             if (x % 2 == 0) iterator.remove();
         }
         System.out.println(list);
 
         iterator = list.iterator();
         while (iterator.hasNext()) {
-            int x = (int) iterator.next();
+            int x = iterator.next();
             if (x == 1) list.add(10); // ConcurrentModificationException here
 
         }

@@ -18,7 +18,7 @@ public class Employee extends Person {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         //coding in terms of abstract classes
         Person student = new Employee("Dove", "Female", 0);
         Person employee = new Employee("Pankaj", "Male", 123);

@@ -12,7 +12,7 @@ public class ClassC {
         obj.doSomething();
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ClassC obj1 = new ClassC(new ClassA());
         ClassC obj2 = new ClassC(new ClassB());
 

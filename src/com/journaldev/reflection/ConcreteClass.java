@@ -1,5 +1,6 @@
 package com.journaldev.reflection;
 
+@Deprecated
 public class ConcreteClass extends BaseClass implements BaseInterface {
 
     public int publicInt;
