@@ -2,6 +2,8 @@ package com.journaldev.reflection;
 
 import java.lang.reflect.*;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ReflectionExample {
 
@@ -175,7 +177,57 @@ public class ReflectionExample {
         System.out.println(privateField.get(objTest));
     }
 
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+    // reflection for methods
+    public static void getPublicMethod() throws ClassNotFoundException, NoSuchMethodException {
+        Method method = Class.forName("java.util.HashMap").getMethod("put", Object.class, Object.class);
+
+        System.out.println(Arrays.toString(method.getParameterTypes()));
+        System.out.println(method.getReturnType());
+        System.out.println(Modifier.toString(method.getModifiers()));
+    }
+
+    public static void invokePublicMethod() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Method method = Class.forName("java.util.HashMap").getMethod("put", Object.class, Object.class);
+
+        Map<String, String> hm = new HashMap<>();
+        method.invoke(hm, "key", "value");
+        System.out.println(hm);
+    }
+
+    public static void invokePrivateMethod() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Method method =
+                Class.forName("com.journaldev.reflection.BaseClass").getDeclaredMethod("method3", null);
+        method.setAccessible(true);
+        method.invoke(null, null);
+    }
+
+    // reflection for constructors
+    public static void getPublicConstructor() throws ClassNotFoundException, NoSuchMethodException {
+        Constructor<?> constructor =
+                Class.forName("com.journaldev.reflection.ConcreteClass").getConstructor(int.class);
+        System.out.println(Arrays.toString(constructor.getParameterTypes()));
+
+        Constructor<?> hashMapConstructor =
+                Class.forName("java.util.HashMap").getConstructor(null);
+        System.out.println(Arrays.toString(hashMapConstructor.getParameterTypes()));
+    }
+
+    public static void instantiateObjectUsingConstructor() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+        Constructor<?> constructor =
+                Class.forName("com.journaldev.reflection.ConcreteClass").getConstructor(int.class);
+        System.out.println(Arrays.toString(constructor.getParameterTypes()));
+
+        Object myObj = constructor.newInstance(10);
+        Method myObjMethod = myObj.getClass().getMethod("method1", null);
+        myObjMethod.invoke(myObj, null);
+
+        Constructor<?> hashMapConstructor =
+                Class.forName("java.util.HashMap").getConstructor(null);
+        System.out.println(Arrays.toString(hashMapConstructor.getParameterTypes()));
+        HashMap<String, String> myMap = (HashMap<String, String>) hashMapConstructor.newInstance(null);
+    }
+
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException, InstantiationException {
 //        getClassObject();
 //        getSuperClass();
 //        getPublicMemberClasses();
@@ -195,5 +247,12 @@ public class ReflectionExample {
 //        getFieldType();
 //        accessPublicFieldValue();
 //        accessPrivateFieldValue();
+
+//        getPublicMethod();
+//        invokePublicMethod();
+//        invokePrivateMethod();
+
+//        getPublicConstructor();
+//        instantiateObjectUsingConstructor();
     }
 }
