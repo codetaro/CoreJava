@@ -228,31 +228,35 @@ public class ReflectionExample {
     }
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException, InstantiationException {
-//        getClassObject();
-//        getSuperClass();
-//        getPublicMemberClasses();
-//        getDeclaredClasses();
-//        getDeclaringClass();
-//        getPackageName();
-//        getClassModifiers();
-//        getTypeParameters();
-//        getImplementedInterfaces();
-//        getAllPublicMethods();
-//        getAllPublicConstructors();
-//        getAllPublicFields();
-//        getAllAnnotations();
+        // reflection for classes
+        getClassObject();
+        getSuperClass();
+        getPublicMemberClasses();
+        getDeclaredClasses();
+        getDeclaringClass();
+        getPackageName();
+        getClassModifiers();
+        getTypeParameters();
+        getImplementedInterfaces();
+        getAllPublicMethods();
+        getAllPublicConstructors();
+        getAllPublicFields();
+        getAllAnnotations();
 
-//        getPublicField();
-//        getFieldDeclaringClass();
-//        getFieldType();
-//        accessPublicFieldValue();
-//        accessPrivateFieldValue();
+        // reflection for fields
+        getPublicField();
+        getFieldDeclaringClass();
+        getFieldType();
+        accessPublicFieldValue();
+        accessPrivateFieldValue();
 
-//        getPublicMethod();
-//        invokePublicMethod();
-//        invokePrivateMethod();
+        // reflection for methods
+        getPublicMethod();
+        invokePublicMethod();
+        invokePrivateMethod();
 
-//        getPublicConstructor();
-//        instantiateObjectUsingConstructor();
+        // reflection for constructors
+        getPublicConstructor();
+        instantiateObjectUsingConstructor();
     }
 }
