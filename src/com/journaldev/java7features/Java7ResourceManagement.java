@@ -1,4 +1,4 @@
-package com.journaldev.java7feautres;
+package com.journaldev.java7features;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

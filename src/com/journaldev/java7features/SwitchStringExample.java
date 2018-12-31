@@ -1,4 +1,4 @@
-package com.journaldev.java7feautres;
+package com.journaldev.java7features;
 
 public class SwitchStringExample {
 
