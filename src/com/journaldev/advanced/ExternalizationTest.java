@@ -6,7 +6,7 @@ public class ExternalizationTest {
 
     public static void main(String[] args) {
 
-        String fileName = "person.ser";
+        String fileName = "tmp/person.ser";
         Person person = new Person();
         person.setId(1);
         person.setName("Pankaj");
