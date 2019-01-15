@@ -41,6 +41,7 @@ public class Employee implements Serializable {
         this.salary = salary;
     }
 
+/*
     public String getPassword() {
         return password;
     }
@@ -48,4 +49,5 @@ public class Employee implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+*/
 }
