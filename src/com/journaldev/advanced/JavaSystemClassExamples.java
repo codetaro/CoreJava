@@ -6,11 +6,13 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Date;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class JavaSystemClassExamples {
 
     public static void main(String[] args) {
+
         // Get current time
         long currentTimeMillis = System.currentTimeMillis();
         Date date = new Date(currentTimeMillis);
@@ -29,18 +31,6 @@ public class JavaSystemClassExamples {
 
         String pathValue = System.getenv("PATH");
         System.out.println("$PATH="+pathValue);
-
-        // Security manager
-        SecurityManager secManager = System.getSecurityManager();
-        if (secManager == null) {
-            System.out.println("SecurityManager is not configured");
-        }
-        SecurityManager mySecManager = new SecurityManager();
-        System.setSecurityManager(mySecManager);
-        secManager = System.getSecurityManager();
-        if (secManager != null) {
-            System.out.println("SecurityManager is configured");
-        }
 
         // File IO operations
         try (FileInputStream fis = new FileInputStream("tmp/input.txt");

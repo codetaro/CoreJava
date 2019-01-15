@@ -3,7 +3,7 @@ package com.journaldev.advanced;
 import java.util.Properties;
 import java.util.Set;
 
-public class JavaSystemClassExample {
+public class JavaSystemPropertiesExample {
 
     public static void main(String[] args) {
 
@@ -20,10 +20,10 @@ public class JavaSystemClassExample {
 
         // clear property example
         System.clearProperty("user.country");
-        System.out.println(System.getProperty("user.country"));  // print null
+        System.out.println(System.getProperty("user.country"));  // prints null
 
         // set system property
-        System.setProperty("user.country", "AU");
-        System.out.println(System.getProperty("user.country"));  // prints "AU"
+        System.setProperty("user.country", "CN");
+        System.out.println(System.getProperty("user.country"));  // prints "CN"
     }
 }
