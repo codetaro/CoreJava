@@ -12,7 +12,7 @@ public class JavaSystemPropertiesExample {
         Set<Object> keySet = systemProps.keySet();
         for (Object obj : keySet) {
             String key = (String) obj;
-            System.out.println("{"+obj+"="+systemProps.getProperty(key)+"}");
+            System.out.println("{" + obj + "=" + systemProps.getProperty(key) + "}");
         }
 
         // get specific property

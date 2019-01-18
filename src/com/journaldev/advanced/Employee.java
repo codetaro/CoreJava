@@ -1,20 +1,34 @@
 package com.journaldev.advanced;
 
 import java.io.Serializable;
+import java.util.Comparator;
 
-public class Employee implements Serializable {
+public class Employee implements Serializable, Comparable<Employee> {
 
     private static final long serialVersionUID = -6470090944414208496L;
 
-    private String name;
     private int id;
+    private String name;
+    private int age;
     transient private int salary;
-    private String password;
+//    private String password;
 
+    public Employee() {
+    }
 
-    @Override
-    public String toString() {
-        return "Employee{name=" + name + ", id=" + id + ", salary=" + salary + "}";
+    public Employee(int id, String name, int age, int salary) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -25,12 +39,12 @@ public class Employee implements Serializable {
         this.name = name;
     }
 
-    public int getId() {
-        return id;
+    public int getAge() {
+        return age;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public int getSalary() {
@@ -50,4 +64,45 @@ public class Employee implements Serializable {
         this.password = password;
     }
 */
+
+    @Override
+    public int compareTo(Employee emp) {
+        return (this.id - emp.id);
+    }
+
+    @Override
+    public String toString() {
+        return "[id=" + this.id + ", name=" + this.name + ", age=" + this.age + ", salary=" +
+                this.salary + "]";
+    }
+
+    /**
+     * Comparator to sort employees list or array in order of Salary
+     */
+    public static Comparator<Employee> SalaryComparator = new Comparator<Employee>() {
+        @Override
+        public int compare(Employee e1, Employee e2) {
+            return e1.getSalary() - e2.getSalary();
+        }
+    };
+
+    /**
+     * Comparator to sort employees list or array in order of Age
+     */
+    public static Comparator<Employee> AgeComparator = new Comparator<Employee>() {
+        @Override
+        public int compare(Employee e1, Employee e2) {
+            return e1.getAge() - e2.getAge();
+        }
+    };
+
+    /**
+     * Comparator to sort employees list or array in order of Name
+     */
+    public static Comparator<Employee> NameComparator = new Comparator<Employee>() {
+        @Override
+        public int compare(Employee e1, Employee e2) {
+            return e1.getName().compareTo(e2.getName());
+        }
+    };
 }

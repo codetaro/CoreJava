@@ -16,21 +16,21 @@ public class JavaSystemClassExamples {
         // Get current time
         long currentTimeMillis = System.currentTimeMillis();
         Date date = new Date(currentTimeMillis);
-        System.out.println("Current time in millis="+currentTimeMillis);
+        System.out.println("Current time in millis=" + currentTimeMillis);
         System.out.println(date);
 
         long nanoTime = System.nanoTime();
-        System.out.println("Current nano time="+nanoTime);
+        System.out.println("Current nano time=" + nanoTime);
 
         // System environment variables
-        Map<String,String> envMap = System.getenv();
+        Map<String, String> envMap = System.getenv();
         Set<String> keySet = envMap.keySet();
         for (String key : keySet) {
-            System.out.println("Key="+key+",value="+envMap.get(key));
+            System.out.println("Key=" + key + ",value=" + envMap.get(key));
         }
 
         String pathValue = System.getenv("PATH");
-        System.out.println("$PATH="+pathValue);
+        System.out.println("$PATH=" + pathValue);
 
         // File IO operations
         try (FileInputStream fis = new FileInputStream("tmp/input.txt");
